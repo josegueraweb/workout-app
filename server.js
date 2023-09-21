@@ -3,6 +3,7 @@ const express = require('express');
 // Import express-session
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+const dotenv = require('dotenv').config();
 
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
@@ -13,7 +14,7 @@ const PORT = process.env.PORT || 3001;
 
 // Set up sessions
 const sess = {
-  secret: 'Super secret secret',
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true,
 };
@@ -31,6 +32,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
+// Starts Express.js server ... listens at PORT. 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening'));
+    app.listen(PORT, () => console.log('Server is now listening for requests!'));
 });
+
+
+
+
+
+
+
