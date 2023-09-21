@@ -31,6 +31,19 @@ User.init(
         len: [6],
       },
     },
+    experience: {
+        type: DataTypes.STRING,
+        allowNull: false,
+
+    },
+    location: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    },
+    trainingType: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    }
   },
   {
     hooks: {
