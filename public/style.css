@@ -1,0 +1,10 @@
+body h1{
+    display: flex;
+    padding: 50px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(242, 226, 202);
+    font-size: larger;
+    justify-content: space-around;
+    margin-left: 0%;
+}
+  
