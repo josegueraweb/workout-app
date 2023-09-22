@@ -52,3 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
     userContent.textContent = "This is your personalized workout guide.";
     dashboardContent.appendChild(userContent);
 });
+
+// Event Listener for Hamburger Menu
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+});
