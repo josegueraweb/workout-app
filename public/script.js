@@ -1,34 +1,64 @@
-// Display content after login
-const firstname = "[First]"; // Replace with the user's first name
-const welcomeMessage = document.getElementById("welcome-message");
-welcomeMessage.textContent = `Hello, ${firstname}!`;
+const express = require('express');
+const app = express();
+const port = 3001; 
 
-// Display user-specified content
-const dashboardContent = document.getElementById("dashboard-content");
-const userContent = document.createElement("p");
-userContent.textContent = "This is your personalized workout guide.";
-dashboardContent.appendChild(userContent);
+// middleware function
+function loggerMiddleware(req, res, next) {
+    console.log(`Request Method: ${req.method}, Request URL: ${req.url}`);
+    next(); 
+  }
+  
+  // Use the middleware
+  app.use(loggerMiddleware)
 
-// Function to fetch and display exercise data
-function fetchExercise(exerciseNumber) {
-    fetch(`https://api-ninjas.com/api/exercises/${exerciseNumber}`)
-        .then(response => response.json())
-        .then(data => {
-            const exerciseResult = document.getElementById('exercise-result');
-            exerciseResult.innerHTML = `<h2>Exercise ${exerciseNumber}</h2>
-                                        <p>${data.exercise}</p>`;
-        })
-        .catch(error => {
-            console.error('Error fetching exercise:', error);
-        });
-}
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
 
-// Add click event listeners to the links
-const exerciseLinks = document.querySelectorAll('a[id^="exercise-link-"]');
-exerciseLinks.forEach(link => {
-    link.addEventListener('click', function (event) {
-        event.preventDefault();
-        const exerciseNumber = this.id.split('-')[2]; // Extract the exercise number
-        fetchExercise(exerciseNumber);
+// // Display content after login
+// const firstname = "[First]"; // Replace with the user's first name
+// const welcomeMessage = document.getElementById("welcome-message");
+// welcomeMessage.textContent = `Hello, ${firstname}!`;
+
+// // Display user-specified content
+// const dashboardContent = document.getElementById("dashboard-content");
+// const userContent = document.createElement("p");
+// userContent.textContent = "This is your personalized workout guide.";
+// dashboardContent.appendChild(userContent);
+
+document.addEventListener("DOMContentLoaded", () => {
+    const loginForm = document.getElementById("login-form");
+
+    // event listener for the form submission
+    loginForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        // Perform authentication logic here (e.g., check username and password)
+
+        // Assuming the authentication is successful, redirect to the homepage
+        window.location.href = "homepage.html"; // need to replace with the actual URL of your homepage
+    });
+
+}); 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const firstname = "[First]"; // Replace with the user's first name
+    const welcomeMessage = document.getElementById("welcome-message");
+    welcomeMessage.textContent = `Hello, ${firstname}!`;
+
+    const dashboardContent = document.getElementById("dashboard-content");
+    const userContent = document.createElement("p");
+    userContent.textContent = "This is your personalized workout guide.";
+    dashboardContent.appendChild(userContent);
+});
+
+// Event Listener for Hamburger Menu
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('active');
     });
 });
