@@ -29,20 +29,7 @@ User.init(
       allowNull: false,
       validate: {
         len: [6],
-      },
-    },
-    experience: {
-        type: DataTypes.STRING,
-        allowNull: false,
-
-    },
-    location: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    trainingType: {
-        type: DataTypes.STRING,
-        allowNull: false,
+      }
     }
   },
   {
