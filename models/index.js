@@ -14,6 +14,10 @@ Preferences.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
+User.hasOne(Preferences, {
+  foreignKey: 'user_id'
+});
 
 
-module.exports = { User, Entry, Preferences };
+
+module.exports = { User, Entry, Preferences };3
