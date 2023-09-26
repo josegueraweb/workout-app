@@ -6,9 +6,10 @@
 }
 
 body {
+    font-family: "Poppins", sans-serif;
     height: 100vh;
     background-color: #ed8585;
-    background-image: url('../img/workout12.jpeg');
+    background-image: url('/img/workout12.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -24,12 +25,13 @@ a {
 }
 
 a:hover {
-    color: orange;
+    color: rgb(255, 0, 0);
 }
 
 header {
     position: relative;
     padding: 0 2rem;
+    font-family: "Poppins", sans-serif;
 }
 
 .navbar {
@@ -40,4 +42,22 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
