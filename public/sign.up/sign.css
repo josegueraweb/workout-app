@@ -10,10 +10,9 @@ body {
     justify-content: center; 
     align-items: center;
     min-height: 100vh;
-    background-image: url('../img/workout2.jpeg');
+    background-image: url('/img/workout2.jpeg');
     background-size: cover;
     background-position: center;
-    
 }
 
 .wrapper {
@@ -22,7 +21,7 @@ body {
     border:2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    color: #f10d0d;
+    color: #000000;
     border-radius: 10px;
     padding: 30px 40px;
 }
