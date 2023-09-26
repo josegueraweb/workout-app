@@ -25,6 +25,7 @@ nav {
     box-shadow: 0 25px 20px -20px rgba(6, 5, 5, 0.4);
     position: relative;
     top: -400px;
+    left: 230px;
     font-family: "Poppins", sans-serif;
     backdrop-filter: blur;
 }
