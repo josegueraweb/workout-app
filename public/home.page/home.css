@@ -31,7 +31,6 @@ a:hover {
 header {
     position: relative;
     padding: 0 2rem;
-    font-family: "Poppins", sans-serif;
 }
 
 .navbar {
@@ -42,13 +41,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: "Poppins", sans-serif;
 }
 
 .navbar .logo a {
     font-size: 1.5rem;
     font-weight: bold;
-    font-family: "Poppins", sans-serif;
 }
 
 .navbar .links {
@@ -73,8 +70,14 @@ header {
     font-size: 0.8rem;
     font-weight: bold;
     cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: #fff;
 }
 
 .action_btn:active {
-    
+    scale: 0.95;
 }
