@@ -62,3 +62,15 @@ document.addEventListener('DOMContentLoaded', () => {
         menu.classList.toggle('active');
     });
 });
+
+
+function unclickRadio() {
+    const radioButtons = document.querySelectorAll('input[type="radio"]');
+    // Loop through the radio buttons
+    radioButtons.forEach(radioButton => {
+        if (radioButton.checked) {
+            // Uncheck the selected radio button
+            radioButton.checked = false;
+        }
+    });
+}
