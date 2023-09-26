@@ -1,0 +1,20 @@
+<article>  
+  <h2>
+    Edit Entry
+  </h2>
+  <form class="edit-entry-form">
+    <div>
+      <input name="entry-title" type="text" value="{{entry.title}}" />      
+    </div>
+    <div>
+      <label for="entry-text">Entry</label>
+      <textarea id="entry-text" name="entry-text">{{entry.entry_text}}</textarea>
+    </div>
+    <button type="submit">Save Changes</button>
+    <button type="button" class="delete-entry-btn">Delete Entry</button>
+  </form>
+</article>
+
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
