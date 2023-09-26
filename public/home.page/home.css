@@ -5,4 +5,11 @@
     font-family: "Poppins", sans-serif;
 }
 
+body {
+    height: 100vh;
+    background-color: #000;
+    background-image: url('/img/workout12.jpeg');
+    background-size: cover;
+    background-position: center;
+}
 
