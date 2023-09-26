@@ -19,12 +19,32 @@
                 <li><a href="hero">Contact</a></li>
                 <li><a href="Login">Login</a></li>
             </ul>
-            <a href="#" class"action_btn">Menu</a>
+            <a href="#" class="action_btn">Menu</a>
             <div class="toggle_btn">
                 <i class='bx bx-menu'></i>
             </div>
+        </div><div class="dropdown_menu">
+            <li><a href="hero">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="hero">Contact</a></li>
+            <li><a href="Login">Login</a></li>
+            <a href="#" class="action_btn">Menu</a>
         </div>
     </header>
+
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.oneClick = function (){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            
+        }
+    </script>
 </body>
 
  <script src="script.js"></script>
