@@ -16,7 +16,6 @@
     justify-content: center;
     position: relative;
     font-family: "Poppins", sans-serif;
-    backdrop-filter: blur(10px);
 }    
 
 nav {
@@ -26,7 +25,7 @@ nav {
     box-shadow: 0 25px 20px -20px rgba(6, 5, 5, 0.4);
     position: relative;
     top: -400px;
-    left: 230px;
+    left: -45px;
     font-family: "Poppins", sans-serif;
     backdrop-filter: blur(10px);
 }
