@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -18,6 +22,13 @@
     font-family: "Poppins", sans-serif;
 }    
 
+.Logo {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    margin-right: 1000px;
+    margin-top: -750px;
+}
+
 nav {
     background: #fff;
     border-radius: 50px;
@@ -25,7 +36,7 @@ nav {
     box-shadow: 0 25px 20px -20px rgba(6, 5, 5, 0.4);
     position: relative;
     top: -400px;
-    left: -45px;
+    left: -600px;
     font-family: "Poppins", sans-serif;
     backdrop-filter: blur(10px);
 }
@@ -67,4 +78,8 @@ nav ul li:hover {
 nav ul li:hover::after {
     top: 50%;
     opacity: 1; 
+}
+
+Logo {
+    font-family: 'Pacifico', cursive;
 }
