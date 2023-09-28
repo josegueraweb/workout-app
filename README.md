@@ -25,5 +25,11 @@ WHEN I answer the question prompts and click generate
 THEN I am given the workouts that meet my criteria 
 
 # Installation
+In local terminal: 
 
-# Mock-Up 
+npm i
+npm run
+npm start 
+
+# Screenshots 
+
