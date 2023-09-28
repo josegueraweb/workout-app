@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
 
 
-
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +13,7 @@ body {
     justify-content: center; 
     align-items: center;
     min-height: 100vh;
-    background-image: url('../img/workout.jpeg');
+    background-image: url('/img/workout11.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -25,7 +24,7 @@ body {
     border:2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    color: #fff;
+    color: #faf5f5;
     border-radius: 10px;
     padding: 30px 40px;
 }
@@ -109,7 +108,7 @@ body {
 }
 
 .register-link p a {
-    color: #efe7e7;
+    color: #fff;
     text-decoration: none;
     font-weight: 600;
 }
@@ -117,4 +116,3 @@ body {
 .register-link p a:hover {
     text-decoration: underline;
 }
-
