@@ -1,35 +1,45 @@
-// Imports JavaScript modules that will be used in this application. 
-const path = require('path');
-const express = require('express');
-const exphbs = require('express-handlebars');
-const routes = require('./controllers');
-const helpers = require('./utils/helpers');
+const express = require('express')
 const sequelize = require('./config/connection');
+const path = require('path');
+const routes = require('./controllers');
+const exphbs = require('express-handlebars');
+const session = require('express-session');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+// const helpers = require('./utils/helpers');
 
+require('dotenv').config();
 
-// Creates an instance of the Express.js application. 
 const app = express();
-
-
-// Sets up the port for this application ... will use Heroku if deployed, default to "localhost: 3001" otherwise. 
 const PORT = process.env.PORT || 3001;
 
 
-// [figure out later ... handlebars.js stuff]
-hbs = exphbs.create({});
+const sess = {
+  secret: 'supersecretsessiontext',
+  cookie: { maxAge: 180000},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
+
+
+
+const hbs = exphbs.create();
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-
-// [figure out later... routes stuff]
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session(sess));
+
+
 app.use(routes);
 
 
-// Imports Express.js middleware. 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-
-// Starts Express.js server ... listens at PORT. 
-app.listen(PORT, () => console.log('Server is now listening for requests!'));
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log(`Now Listening on ${PORT}`));
+});
