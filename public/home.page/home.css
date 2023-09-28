@@ -44,6 +44,7 @@ nav {
     top: -400px;
     left: -700px;
     font-family: "Poppins", sans-serif;
+
     backdrop-filter: blur(10px);
 }
 
@@ -88,4 +89,9 @@ nav ul li:hover::after {
 
 Logo {
     font-family: 'Pacifico', cursive;
+}
+
+.dropdown {
+    color: #f44566;
+    margin-top: 500px;
 }
