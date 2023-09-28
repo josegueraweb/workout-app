@@ -29,7 +29,9 @@ router.get('/', (req, res) => {
       res.status(500).json(err);
     });
 });
-
+router.get('/register', (req, res)=> {
+  res.render('register')
+})
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
