@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Entry, User} = require('../models');
-const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
   Entry.findAll({
@@ -13,15 +12,14 @@ router.get('/', (req, res) => {
     include: [
       {
         model: User,
-        attributes: ['email']
+        attributes: ['username']
       }
     ]
   })
     .then(dbEntryData => {
       const entries = dbEntryData.map(entry => entry.get({ plain: true }));
       // pass a single post object into the homepage template
-      res.render('home', { 
-        stylesheet: "style.css",
+      res.render('homepage', { 
         entries,
         loggedIn: req.session.loggedIn 
       });
@@ -31,28 +29,16 @@ router.get('/', (req, res) => {
       res.status(500).json(err);
     });
 });
-
-router.get("/profile", withAuth, (req,res) => {
-  res.render('profile', { 
-    stylesheet: "profile.css",
-    loggedIn: req.session.loggedIn 
-  });
+router.get('/register', (req, res)=> {
+  res.render('register')
 })
-
-router.get("/signup", (req,res) => {
-  res.render('signup', { 
-    stylesheet: "signup.css",
-    loggedIn: req.session.loggedIn 
-  });
-})
-
-// router.get('/login', (req, res) => {
-//   if (req.session.loggedIn) {
-//     res.redirect('/');
-//     return;
-//   }
-//   res.render('login');
-// });
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  res.render('login');
+});
 
 router.get('/entry/:id', (req, res) => {
   Entry.findOne({
@@ -67,7 +53,7 @@ router.get('/entry/:id', (req, res) => {
     include: [
       {
         model: User,
-        attributes: ['email']
+        attributes: ['username']
       }
     ]
   })
