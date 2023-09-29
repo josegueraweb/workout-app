@@ -85,6 +85,9 @@ nav ul li:hover::after {
     top: 50%;
     opacity: 1; 
 }
+.logoutbtn {
+    top:0%
+}
 
 Logo {
     font-family: 'Pacifico', cursive;

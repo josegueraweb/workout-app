@@ -8,12 +8,12 @@
                 <li>Home</li>
                 <li>About Us</li>
                 <li>Contact Us</li>
-                <li>Login</li>
+                <li><a href="/login">Login</a></li>
             </ul>
         </nav>
 
     </div>
-
+{{#if loggedIn}}
     <form id="workout-form">
 
         <!-- Question: What level of exercise are you comfortable with? -->
@@ -98,8 +98,9 @@
 
     </div>
     <button id="regenerate-button" class="hidden">Regenerate Workout</button>
+    <button class="logoutbtn">Logout</button>
 
-
+{{/if}}
 
 
 
