@@ -1,13 +1,15 @@
+
+{{#if loggedIn}}
 {{#if entries.length}}
-<section>
+<section style = "background-color: beige">
   <h2>Your Entries</h2>
-  <ol class="entry-list">
+  <ul class="entry-list">
     {{#each entries as |entry|}}
     <li>
-      {{> dashboard-entry-info entry}}      
+      {{> journal-entry-info entry}}      
     </li>
     {{/each}}
-  </ol>
+  </ul>
 </section>
 {{else}}
 <section>
@@ -16,3 +18,5 @@
 {{/if}}
 
 <button type="submit"><a href="/dashboard/new">Add New Entry</a></button>
+{{/if}}
+<button type="submit"><a href="/">Back to Home Page</a></button>

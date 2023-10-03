@@ -30,7 +30,7 @@ workoutForm.addEventListener("submit", function (event) {
     console.log("Workout Type: " + workoutType);
     console.log("Muscle Type: " + muscleType);
 
-    var apiURL = 'https://api.api-ninjas.com/v1/exercises?type=' + workoutType + '&difficulty=' + level + '&equipment=' + muscleType;
+    var apiURL = 'https://api.api-ninjas.com/v1/exercises?type=' + workoutType + '&difficulty=' + level + '&muscle=' + muscleType;
 
     results.innerHTML = "";
 

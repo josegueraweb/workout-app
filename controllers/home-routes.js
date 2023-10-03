@@ -6,14 +6,8 @@ router.get('/', (req, res) => {
   Entry.findAll({
     attributes: [
       'id',
-      'title',
+      'date',
       "entry_text"     
-    ],
-    include: [
-      {
-        model: User,
-        attributes: ['username']
-      }
     ]
   })
     .then(dbEntryData => {
@@ -28,6 +22,31 @@ router.get('/', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
+});
+router.get('/journal', (req, res) => {
+  Entry.findAll({
+    attributes: [
+      'id',
+      'date',
+      "entry_text"     
+    ]
+  })
+    .then(dbEntryData => {
+      const entries = dbEntryData.map(entry => entry.get({ plain: true }));
+      // pass a single post object into the homepage template
+      if(req.session.loggedIn) {
+      res.render('journal', { 
+        entries,
+        loggedIn: req.session.loggedIn 
+      });} else {
+        res.render('login')
+      }
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+  
 });
 router.get('/register', (req, res)=> {
   res.render('register')
@@ -47,14 +66,8 @@ router.get('/entry/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'title',
+      'date',
       'entry_text'
-    ],
-    include: [
-      {
-        model: User,
-        attributes: ['username']
-      }
     ]
   })
   .then(dbEntryData => {

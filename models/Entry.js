@@ -11,7 +11,7 @@ Entry.init(
       primaryKey: true,
       autoIncrement: true
     },
-    title: {
+    date: {
       type: DataTypes.STRING,
       allowNull: false
     },

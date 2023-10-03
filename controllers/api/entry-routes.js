@@ -3,13 +3,7 @@ const { Entry, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 router.get('/', (req, res) => {
   Entry.findAll({
-    attributes: ['id', 'title', 'entry_text'],
-    include: [
-      {
-        model: User,
-        attributes: ['username']
-      }
-    ]
+    attributes: ['id', 'date', 'entry_text']
   })
   .then(dbEntryData => res.json(dbEntryData))
   .catch(err => {
@@ -23,13 +17,7 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    attributes: ['id', 'title', 'entry_text'],
-    include: [
-      {
-        model: User,
-        attributes: ['username']
-      }
-    ]
+    attributes: ['id', 'date', 'entry_text']
   })
     .then(dbEntryData => {
       if (!dbEntryData) {
@@ -46,9 +34,9 @@ router.get('/:id', (req, res) => {
 
 router.post('/', withAuth, (req, res) => {  
   Entry.create({
-    title: req.body.title,
+    date: req.body.date,
     entry_text: req.body.entry_text,
-    user_id: req.session.user_id
+    
   })
     .then(dbEntryData => res.json(dbEntryData))
     .catch(err => {
@@ -60,7 +48,7 @@ router.post('/', withAuth, (req, res) => {
 router.put('/:id', withAuth, (req, res) => {
   Entry.update(
     {
-      title: req.body.title,
+      date: req.body.date,
       entry_text: req.body.entry_text
     },
     {
