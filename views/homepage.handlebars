@@ -1,7 +1,109 @@
-<ol class="entry-list">
-  {{#each entries as |entry|}}
-  <li>
-    {{> entry-info entry}}
-  </li>
-  {{/each}}
-</ol>
+<head>
+  <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+<div class="container">
+        <a href=" #" class="Logo">Titans Training</a>
+        <nav>
+            <ul>
+
+                <li><a href="/login">Login</a></li>
+                <li><a href="/journal">Journal</a></li>
+                
+            </ul>
+        </nav>
+
+    </div>
+{{#if loggedIn}}
+    <form id="workout-form">
+
+        <!-- Question: What level of exercise are you comfortable with? -->
+        <p>What level of exercise are you comfortable with?</p>
+        <input type="radio" id="level-beginner" name="level-type" value="beginner">
+        <label for="level-beginner">Beginner</label><br>
+        <input type="radio" id="level-intermediate" name="level-type" value="intermediate">
+        <label for="level-intermediate">Intermediate</label><br>
+        <input type="radio" id="level-expert" name="level-type" value="expert">
+        <label for="level-expert">Expert</label><br>
+
+        <!-- Question: What type of workout are you looking for? -->
+        <p>What type of workout are you looking for?</p>
+        <input type="radio" id="workout-cardio" name="workout-type" value="cardio">
+        <label for="workout-cardio">Cardio</label><br>
+        <input type="radio" id="workout-olympic-weigthlifting" name="workout-type" value="olympic_weigthlifting">
+        <label for="workout-olympic-weigthlifting">Olympic Weightlifting</label><br>
+        <input type="radio" id="workout-plyometrics" name="workout-type" value="plyometrics">
+        <label for="workout-plyometrics">Plyometrics</label><br>
+        <input type="radio" id="workout-strength" name="workout-type" value="strength">
+        <label for="workout-strength">Strength</label><br>
+        <input type="radio" id="workout-stretching" name="workout-type" value="stretching">
+        <label for="workout-stretching">Stretching</label><br>
+        <input type="radio" id="workout-strongman" name="workout-type" value="strongman">
+        <label for="workout-strongman">Strongman</label><br>
+
+        <!-- Question: What type of equipment do you have? -->
+        <p>What type of muscle do you want to target? (OPTIONAL: Select only one)</p>
+        <input type="checkbox" id="muscle-abdominals" name="muscle-type" value="abdominals">
+        <label for="muscle-abdominals">Abdominals</label><br>
+        
+        <input type="checkbox" id="muscle-abductors" name="muscle-type" value="abductors">
+        <label for="muscle-abductors">Abductors</label><br>
+
+        <input type="checkbox" id="muscle-adductors" name="muscle-type" value="adductors">
+        <label for="muscle-adductors">Adductors</label><br>
+
+        <input type="checkbox" id="muscle-biceps" name="muscle-type" value="biceps">
+        <label for="muscle-biceps">Biceps</label><br>
+
+        <input type="checkbox" id="muscle-calves" name="muscle-type" value="calves">
+        <label for="muscle-calves">Calves</label><br>
+
+        <input type="checkbox" id="muscle-chest" name="muscle-type" value="chest">
+        <label for="muscle-chest">Chest</label><br>
+
+        <input type="checkbox" id="muscle-forearms" name="muscle-type" value="forearms">
+        <label for="muscle-forearms">Forearms</label><br>
+
+        <input type="checkbox" id="muscle-glutes" name="muscle-type" value="glutes">
+        <label for="muscle-glutes">Glutes</label><br>
+        
+        <input type="checkbox" id="muscle-hamstrings" name="muscle-type" value="hamstrings">
+        <label for="muscle-hamstrings">Hamstrings</label><br>
+        
+        <input type="checkbox" id="muscle-lats" name="muscle-type" value="lats">
+        <label for="muscle-lats">Lats</label><br>
+        
+        <input type="checkbox" id="muscle-lower-back" name="muscle-type" value="lower_back">
+        <label for="muscle-lower-back">Lower Back</label><br>
+        
+        <input type="checkbox" id="muscle-middle-back" name="muscle-type" value="middle_back">
+        <label for="muscle-middle-back">Glutes</label><br>
+
+        <input type="checkbox" id="muscle-neck" name="muscle-type" value="neck">
+        <label for="muscle-neck">Neck</label><br>
+
+        <input type="checkbox" id="muscle-quadriceps" name="muscle-type" value="quadriceps">
+        <label for="muscle-quadriceps">Quadriceps</label><br>
+
+        <input type="checkbox" id="muscle-traps" name="muscle-type" value="traps">
+        <label for="muscle-traps">Traps</label><br>
+
+        <input type="checkbox" id="muscle-triceps" name="muscle-type" value="triceps">
+        <label for="muscle-triceps">Triceps</label><br>
+
+        <!-- HTML submit button -->
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="results" class="hidden">
+
+    </div>
+    <div class ="btns">
+    <button id="regenerate-button" class="hidden">Regenerate Workout</button>
+    <button class="logoutbtn">Logout</button>
+    </div>
+
+{{/if}}
+
+
+
+ <script src="../script.js"></script>

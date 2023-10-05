@@ -19,7 +19,7 @@ router.get('/', withAuth, (req, res) => {
   .then(dbEntryData => {
     //serialize the data before passing to the template
     const entries = dbEntryData.map(entry => entry.get({ plain: true }));
-    res.render('dashboard', { entries, loggedIn: true });
+    res.render('journal', { entries, loggedIn: true });
   })
   .catch(err => {
     console.log(err);

@@ -30,7 +30,7 @@ workoutForm.addEventListener("submit", function (event) {
     console.log("Workout Type: " + workoutType);
     console.log("Muscle Type: " + muscleType);
 
-    var apiURL = 'https://api.api-ninjas.com/v1/exercises?type=' + workoutType + '&difficulty=' + level + '&equipment=' + muscleType;
+    var apiURL = 'https://api.api-ninjas.com/v1/exercises?type=' + workoutType + '&difficulty=' + level + '&muscle=' + muscleType;
 
     results.innerHTML = "";
 
@@ -83,9 +83,24 @@ function generateWorkout(apiURL) {
         return str.charAt(0).toUpperCase() + str.slice(1);
     }
 
+
     
 
-
+const logout = async () => {
+    const response = await fetch('/api/users/logout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+    });
+  
+    if (response.ok) {
+      document.location.replace('/');
+    } else {
+      alert('Failed to log out.');
+    }
+  };
+  
+  const logOut = document.querySelector('.logoutbtn');
+  logOut.addEventListener('click', logout);
 
 
 

@@ -26,25 +26,28 @@
     color: #fff;
     font-family: "Poppins", sans-serif;
     margin-right: 1000px;
-    margin-top: -770px;
+    margin-top: -701px;
     text-decoration: none;
     font-weight: 600;
     font-size: 30px;
     padding: 0;
     box-sizing: border-box;
     cursor: default;
+    margin-left: 250px;
 }
 
 nav {
     background: #fff;
     border-radius: 50px;
+    width: 450px;
     padding: 10px;
     box-shadow: 0 25px 20px -20px rgba(6, 5, 5, 0.4);
     position: relative;
-    top: -400px;
-    left: -700px;
+    left: -600px;
     font-family: "Poppins", sans-serif;
     backdrop-filter: blur(10px);
+    top: -350px;
+
 }
 
 nav ul li {
@@ -91,4 +94,16 @@ nav ul li:hover::after {
 
 Logo {
     font-family: 'Pacifico', cursive;
+}
+.item {
+    background-color: beige;
+    width: 1438px;
+    margin-left: 197px;
+}
+#workout-form {
+    background-color: beige;
+    margin-left: 197px;
+}
+.btns {
+    margin-left: 200px;
 }
