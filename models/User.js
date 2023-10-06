@@ -8,53 +8,37 @@ class User extends Model {
   }
 }
 
-User.init(
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true,
-    },
-
-    fullname: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: false,
+User.init({
+  id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    primaryKey: true,
+    autoIncrement: true,
   },
-
-  phonenumber: {
+  email: {
     type: DataTypes.STRING,
     allowNull: false,
-    unique: false,
-},
-    
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [6],
-      }
-    }
+    unique: true,
   },
-  {
-    hooks: {
-      async beforeCreate(newUserData) {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
-      },
-    },
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'user',
+  password: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    validate: {
+      len: [6],
+    }
   }
-);
+}, {
+  hooks: {
+    async beforeCreate(newUserData) {
+      newUserData.password = await bcrypt.hash(newUserData.password, 10);
+      return newUserData;
+    },
+  },
+  sequelize,
+  timestamps: false,
+  freezeTableName: true,
+  underscored: true,
+  modelName: 'user',
+});
 
 module.exports = User;

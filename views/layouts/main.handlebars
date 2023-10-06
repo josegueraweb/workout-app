@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="/style.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
+  <title>Titans Training</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
   <style>
     /* CSS class to hide elements */
     .hidden {
-        display: none;
+      display: none;
     }
-</style>
+  </style>
 </head>
 
+<nav>
+  {{#if logged_in}}
+  <a href="/profile">profile</a> |
+  <button id="btn-logout" class="no-button">logout</button>
+  {{/if}}
+</nav>
+
 <body>
-
-<div>
- 
- {{{body}}}
-  
-</div>
+  <div>
+    {{{body}}}
+  </div>
 
 
 
-{{#if loggedIn}}
+  {{#if loggedIn}}
   <script src="/public/javascript/logout.js"></script>
   {{/if}}
+
 </body>
-
-
-
-
-

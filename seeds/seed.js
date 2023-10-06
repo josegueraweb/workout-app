@@ -1,15 +1,19 @@
 const sequelize = require('../config/connection');
-const { User } = require('../models');
+const User = require('../models/User');
 
 const userData = require('./userData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
+ if (User){
+  await User.bulkCreate(userData, {
+      individualHooks: true,
+      returning: true,
+    });
+  } else {
+    console.error("User model is undefined.");
+  }
 
   process.exit(0);
 };
