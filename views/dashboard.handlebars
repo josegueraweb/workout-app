@@ -1,4 +1,4 @@
-{{#if loggedIn}}
+{{#if logged_in}}
 
 <form id="workout-form">
 
@@ -85,9 +85,14 @@
 </div>
 <div class="btns">
     <button id="regenerate-button" class="hidden">Regenerate Workout</button>
-    <button class="logoutbtn">Logout</button>
 </div>
 
 {{/if}}
 
-<script src="../public/javascript/dashboard.js"></script>
+{{#if logged_in}}
+<button id="btn-logout">logout</button>
+{{/if}}
+
+<script src="/javascript/dashboard.js"></script>
+
+<script src="/javascript/logout.js"></script>

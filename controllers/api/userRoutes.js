@@ -25,18 +25,18 @@ router.post('/login', async (req, res) => {
         email: req.body.email
       }
     });
-
+    console.log(req.body);
     if (!userData) {
       res
         .status(400)
         .json({
-          message: 'Incorrect email or password, please try again'
+          message: 'Cannot find user.'
         });
       return;
     }
 
     const validPassword = await userData.checkPassword(req.body.password);
-
+    console.log(userData, validPassword);
     if (!validPassword) {
       res
         .status(400)
@@ -83,7 +83,7 @@ router.post('/register', async (req, res) => {
 
 // Logic for Logout Button
 router.post('/logout', (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();
     })

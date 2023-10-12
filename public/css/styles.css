@@ -1,9 +1,11 @@
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
+/*
 
 body {
     display: flex;
@@ -13,7 +15,8 @@ body {
     background-color: #fff;
 }
 
-.wrapper {
+*/
+.login-wrapper {
     width: 420px;
     background: rgb(8, 7, 8);
     color: #fff;
@@ -21,19 +24,22 @@ body {
     padding: 30px 40px;
 }
 
-.wrapper h1 {
+
+.login-wrapper h1 {
     font-size: 36px;
     text-align: center;
 }
 
-.wrapper .input-box {
+.login-wrapper .input-box {
     position: relative;
     width: 100%;
     height: 50px;
     margin: 30px 0;
+    padding: 1rem;
+
 }
 
-.input-box input {
+.login-input-box input {
     width: 100%;
     height: 100%;
     background: transparent;
@@ -43,14 +49,14 @@ body {
     border-radius: 40px;
     font-size: 16px;
     color: #fff;
-    padding: 20px 45px 20px 20px;
+    padding: 1rem 2rem 1rem 1rem;
 }
 
-.input-box input::placeholder {
+.login-input-box input::placeholder {
     color: #fff;
 }
 
-.input-box i {
+.login-input-box i {
     position: absolute;
     right: 20px;
     top: 50%;
@@ -58,27 +64,65 @@ body {
     font-size: 20px;
 }
 
-.wrapper .remember-forgot {
+.login-wrapper .login-remember-forgot {
     display: flex;
     justify-content: space-between;
     font-size: 14.5px;
-    margin: -15px 0 15px;
+    padding: 1rem;
 }
-.remember-forgot label input {
+.login-remember-forgot label input {
     accent-color: #fff;
     margin-right: 3px;
 }
 
-.remember-forgot a {
+.login-remember-forgot a {
     color: #fff;
     text-decoration: underline;
 }
 
-.remember-forgot a:hover {
+.login-remember-forgot a:hover {
     text-decoration: underline;
 }
 
-.wrapper .btn {
+.login-wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #cc0404cb;
+    border: node;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.login-wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+    margin: 20px 0 15px;
+    padding: 1rem;
+}
+
+.login-register-link {
+    margin: 0, auto;
+}
+
+.login-register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 5rem;
+
+}
+
+.login-register-link p a:hover {
+    text-decoration: underline;
+}
+
+.btn-login {
     width: 100%;
     height: 45px;
     background: #fff;
@@ -92,27 +136,10 @@ body {
     font-weight: 600;
 }
 
-.wrapper .register-link {
-    font-size: 14.5px;
-    text-align: center;
-    margin-top: 20px;
-    margin: 20px 0 15px;
-}
-
-.register-link p a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.register-link p a:hover {
-    text-decoration: underline;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
 
 
-
+/*
 * {
     margin: 0;
     padding: 0;
@@ -120,17 +147,19 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-body {
+* body {
     display: flex;
     justify-content: center; 
     align-items: center;
     min-height: 100vh;
-    background-image: url('/img/workout.jpeg');
+    background-image: url('/images/workout.jpeg');
     background-size: cover;
     background-position: center;
-}
+} 
 
-.wrapper {
+/* */
+
+.signup-wrapper {
     width: 420px;
     background: transparent;
     border:2px solid rgba(255, 255, 255, .2);
@@ -141,19 +170,19 @@ body {
     padding: 30px 40px;
 }
 
-.wrapper h1 {
+.signup-wrapper h1 {
     font-size: 36px;
     text-align: center;
 }
 
-.wrapper .input-box {
+.signup-wrapper .input-box {
     position: relative;
     width: 100%;
     height: 50px;
     margin: 30px 0;
 }
 
-.input-box input {
+.signup-input-box input {
     width: 100%;
     height: 100%;
     background: transparent;
@@ -166,11 +195,11 @@ body {
     padding: 20px 45px 20px 20px;
 }
 
-.input-box input::placeholder {
+.signup-input-box input::placeholder {
     color: #fff;
 }
 
-.input-box i {
+.signup-input-box i {
     position: absolute;
     right: 20px;
     top: 50%;
@@ -178,27 +207,27 @@ body {
     font-size: 20px;
 }
 
-.wrapper .remember-forgot {
+.signup-wrapper .remember-forgot {
     display: flex;
     justify-content: space-between;
     font-size: 14.5px;
     margin: -15px 0 15px;
 }
-.remember-forgot label input {
+.signup-remember-forgot label input {
     accent-color: #fff;
     margin-right: 3px;
 }
 
-.remember-forgot a {
+.signup-remember-forgot a {
     color: #fff;
     text-decoration: underline;
 }
 
-.remember-forgot a:hover {
+.signup-remember-forgot a:hover {
     text-decoration: underline;
 }
 
-.wrapper .btn {
+.signup-wrapper .btn {
     width: 100%;
     height: 45px;
     background: #fff;
@@ -212,26 +241,26 @@ body {
     font-weight: 600;
 }
 
-.wrapper .register-link {
+.signup-wrapper .register-link {
     font-size: 14.5px;
     text-align: center;
     margin-top: 20px;
     margin: 20px 0 15px;
 }
 
-.register-link p a {
+.signup-register-link p a {
     color: #efe7e7;
     text-decoration: none;
     font-weight: 600;
 }
 
-.register-link p a:hover {
+.signup-register-link p a:hover {
     text-decoration: underline;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
 
-
+/*
 * {
     margin: 0;
     padding: 0;
@@ -239,15 +268,17 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-body {
+ body {
     display: flex;
     justify-content: center; 
     align-items: center;
     min-height: 100vh;
-    background-image: url('/img/workout11.jpeg');
+    background-image: url('/images/workout11.jpeg');
     background-size: cover;
     background-position: center;
 }
+
+/*
 
 .wrapper {
     width: 420px;
@@ -551,4 +582,4 @@ Logo {
 }
 .btns {
     margin-left: 200px;
-}
+} */

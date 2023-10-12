@@ -7,19 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Titans Training</title>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="/style.css">
-  <style>
-    /* CSS class to hide elements */
-    .hidden {
-      display: none;
-    }
-  </style>
+  <link rel="stylesheet" href="/css/styles.css">
+
 </head>
 
 <nav>
   {{#if logged_in}}
-  <a href="/profile">profile</a> |
-  <button id="btn-logout" class="no-button">logout</button>
+  <button id="btn-logout">logout</button>
   {{/if}}
 </nav>
 
@@ -30,8 +24,8 @@
 
 
 
-  {{#if loggedIn}}
-  <script src="/public/javascript/logout.js"></script>
+  {{#if logged_in}}
+  <script src="/javascript/logout.js"></script>
   {{/if}}
 
 </body>

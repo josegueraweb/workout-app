@@ -1,23 +1,14 @@
 [
   {
     "email": "ww@gmail.com",
-    "firstName": "Wilbur",
-    "lastName": "Watson",
-    "phoneNumber": "5555555",
     "password": "password12345"
   },
   {
     "email": "ik@gmail.com",
-    "firstName": "Ike",
-    "lastName": "Smith",
-    "phoneNumber": "5555555",
     "password": "password12345"
   },
   {
     "email": "nr@gmail.com",
-    "firstName": "Noah",
-    "lastName": "Riddle",
-    "phoneNumber": "5555555",
     "password": "password12345"
   }
 ]

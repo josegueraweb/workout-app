@@ -9,7 +9,7 @@ async function registerFormHandler(event) {
 
   
     if (firstName && lastName && phoneNumber && email && password) {
-      const response = await fetch('/api/userRoutes', {
+      const response = await fetch('/api/users/register', {
         method: 'POST',
         body: JSON.stringify({
           email,
