@@ -60,13 +60,13 @@ The **Titans Training** web application assists users in generating custom worko
 
 ## Mock-Up
 **Login Page**
-![shot_01](public/images/screenshots/Screenshot1.png)
+![shot_01](public/images/screenshots/screenshot1.png)
 
 **Workout Questionaire**
-![shot_02](public/images/screenshots/Screenshot2.png)
+![shot_02](public/images/screenshots/screenshot2.png)
 
 **Generate List of Workouts**
-![shot_03](public/images/screenshots/Screenshot3.png)
+![shot_03](public/images/screenshots/screenshot3.png)
 
 **Register Page**
-![shot_04](public/images/screenshots/Screenshot4.png)
+![shot_04](public/images/screenshots/screenshot4.png)
