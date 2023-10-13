@@ -1,26 +1,33 @@
-async function signupFormHandler(event) {
+async function registerFormHandler(event) {
     event.preventDefault();
   
-    const username = document.querySelector('#username-signup').value.trim();  
-    const password = document.querySelector('#password-signup').value.trim();
+    const firstName = document.querySelector('#first-name-register').value.trim();  
+    const lastName = document.querySelector('#last-name-register').value.trim();
+    const phoneNumber = document.querySelector('#phone-number-register').value.trim();
+    const email = document.querySelector('#email-register').value.trim();
+    const password = document.querySelector('#password-register').value.trim();
+
   
-    if (username && password) {
-      const response = await fetch('/api/users', {
-        method: 'post',
+    if (firstName && lastName && phoneNumber && email && password) {
+      const response = await fetch('/api/users/register', {
+        method: 'POST',
         body: JSON.stringify({
-          username,
+          email,
+          firstName,
+          lastName,
+          phoneNumber,
           password
         }),
         headers: { 'Content-Type': 'application/json' }
       });
       if (response.ok) {
         console.log('Success');
-        alert('New user has been created you are now able to login log in');
-        document.location.replace('/login');
+        alert('New user has been created! You are now able to login log in');
+        document.location.replace('/dashboard');
       } else {
         alert(response.statusText);
       }
     }}
    
-var signupbtn = document.querySelector('.btn')
-signupbtn.addEventListener('click', signupFormHandler);
+var registerBtn = document.querySelector('.btn-register')
+registerBtn.addEventListener('click', registerFormHandler);

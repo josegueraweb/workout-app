@@ -1,22 +1,14 @@
 [
   {
-    "fullname": "Sal",
-    "email": "sal@hotmail.com",
-    "password": "password12345",
-    "phonenumber": "5555555555"
-    
+    "email": "ww@gmail.com",
+    "password": "password12345"
   },
   {
-    "fullname": "Lernantino",
-    "email": "lernantino@gmail.com",
-    "password": "password12345",
-    "phonenumber": "5555555555"
-    
+    "email": "ik@gmail.com",
+    "password": "password12345"
   },
   {
-    "fullname": "Amiko",
-    "email": "amiko2k20@aol.com",
-    "password": "password12345",
-    "phonenumber": "5555555555"
+    "email": "nr@gmail.com",
+    "password": "password12345"
   }
 ]

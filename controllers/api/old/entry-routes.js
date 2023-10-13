@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Entry, User } = require('../../models');
-const withAuth = require('../../utils/auth');
+const withAuth = require('../../../utils/auth');
 router.get('/', (req, res) => {
   Entry.findAll({
     attributes: ['id', 'date', 'entry_text']

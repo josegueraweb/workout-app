@@ -1,0 +1,683 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+
+.hidden {
+    display: none;
+}
+
+#results {
+    margin: 0 auto;
+    background-color: black;
+    height: 60%;
+    width: 50%;
+    line-height: 3rem;
+    padding: 5rem;
+    color: white;
+}
+
+/* //Login Page ================================= */
+
+
+.login-wrapper { /* form container */
+    width: 420px;
+    background: rgb(8, 7, 8);
+    color: #040000;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+
+.login-wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+}
+
+.login-wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    padding: 1rem;
+
+}
+
+.login-input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 1rem 2rem 1rem 1rem;
+}
+
+.login-input-box input::placeholder {
+    color: #fff;
+}
+
+.login-input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.login-wrapper .login-remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    padding: 1rem;
+}
+.login-remember-forgot {
+    color: #fff;
+    padding-right: 1rem;
+}
+
+.login-remember-forgot a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.page-container {
+    z-index: -1;
+}
+
+.remember-checkbox {
+    margin-right: 1rem;
+}
+
+#login-form {
+    line-height: 3.5rem;
+}
+
+.login-remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.login-wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #cc0404cb;
+    border: node;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.login-wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+    margin: 20px 0 15px;
+    padding: 1rem;
+}
+
+.login-register-link {
+    margin: 0, auto;
+    color: #fff;
+}
+
+.login-register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 5rem;
+
+}
+
+.login-register-link p a:hover {
+    text-decoration: underline;
+}
+
+.btn-login {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: node;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 600;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+
+/* Register Page ================================= */
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+* body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/images/workout.jpeg');
+    background-size: cover;
+    background-position: center;
+}  */
+
+.signup-wrapper { /* form container */
+    width: 25rem;
+    background-color: #000000;
+    border:2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 5rem;
+}
+
+
+.signup-wrapper h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+
+
+.signup-wrapper .signup-input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.signup-input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #2cff80;
+    padding: 20px 45px 20px 20px;
+}
+
+.signup-input-box input::placeholder {
+    color: #f9f9f9;
+}
+
+.signup-input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.signup-wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+.signup-remember-forgot label input {
+    accent-color: #000000;
+    margin-right: 3px;
+}
+
+.signup-remember-forgot a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.signup-remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.bx-register {
+    color: #ffffff;
+}
+
+.btn-register {
+    width: 100%;
+    height: 45px;
+    background: #fffefe;
+    border: node;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 600;
+}
+
+.signup-wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+    margin: 20px 0 15px;
+}
+
+.signup-register-link p a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-register-link p a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+ body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/images/workout11.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+/*
+
+.wrapper {
+    width: 420px;
+    background: transparent;
+    border:2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #faf5f5;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: node;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    background-image: url('/img/workout12.jpeg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+}    
+
+.Logo {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    margin-right: 1000px;
+    margin-top: -770px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 30px;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+nav {
+    background: #fff;
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0 25px 20px -20px rgba(6, 5, 5, 0.4);
+    position: relative;
+    top: -400px;
+    left: -700px;
+    font-family: "Poppins", sans-serif;
+    backdrop-filter: blur(10px);
+}
+
+nav ul li {
+     list-style: none;
+     display: inline-block;
+     padding: 13px 35px;
+     margin: 10px;
+     font-size: 15px;
+     font-weight: 600;
+     color: #000000;
+     cursor: pointer;
+     position: relative;
+     z-index: 2;
+     transition: color 0.5s;
+     font-family: "Poppins", sans-serif;
+}
+
+nav ul li::after {
+    content: '';
+    background: #f44566;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s, opacity 0.5s;
+}
+
+nav ul li:hover {
+    color: #ffffff;
+}
+
+nav ul li:hover::after {
+    top: 50%;
+    opacity: 1; 
+}
+.logoutbtn {
+    top:0%
+}
+
+Logo {
+    font-family: 'Pacifico', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    background-image: url('/img/workout12.jpeg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+}    
+
+.Logo {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    margin-right: 1000px;
+    margin-top: -701px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 30px;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+    margin-left: 250px;
+}
+
+nav {
+    background: #fff;
+    border-radius: 50px;
+    width: 450px;
+    padding: 10px;
+    box-shadow: 0 25px 20px -20px rgba(6, 5, 5, 0.4);
+    position: relative;
+    left: -600px;
+    font-family: "Poppins", sans-serif;
+    backdrop-filter: blur(10px);
+    top: -350px;
+
+}
+
+nav ul li {
+     list-style: none;
+     display: inline-block;
+     padding: 13px 35px;
+     margin: 10px;
+     font-size: 15px;
+     font-weight: 600;
+     color: #000000;
+     cursor: pointer;
+     position: relative;
+     z-index: 2;
+     transition: color 0.5s;
+     font-family: "Poppins", sans-serif;
+}
+
+nav ul li::after {
+    content: '';
+    background: #f44566;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s, opacity 0.5s;
+}
+
+nav ul li:hover {
+    color: #ffffff;
+}
+
+nav ul li:hover::after {
+    top: 50%;
+    opacity: 1; 
+}
+.logoutbtn {
+    top:0%
+}
+
+Logo {
+    font-family: 'Pacifico', cursive;
+}
+.item {
+    background-color: beige;
+    width: 1438px;
+    margin-left: 197px;
+}
+
+
+*/
+#workout-form {
+    margin: 2rem 0 2rem 0;
+    background-color: rgb(0, 0, 0);
+    line-height: 1.5rem;
+    padding: .5rem 2rem;
+    color:#fff;
+    border:2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+}
+
+#workout-form p {
+    margin: 1rem 0;
+}
+
+.workout-submit-btn {
+    margin: 2rem 0 1rem 0;
+    width: 100%;
+    height: 45px;
+    background: #fffefe;
+    border: node;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 600;
+}
+
+#regenerate-button {
+    margin: 0 0 4rem 0;
+    width: 100%;
+    height: 45px;
+    background: #fffefe;
+    border: node;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 600;
+}
+
+#btn-logout {
+    margin: 1rem 0 4rem 0;
+    width: 100%;
+    height: 45px;
+    background: #fffefe;
+    border: node;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 600;
+}
+
+
+
+/*
+.btns {
+    margin-left: 200px;
+} */
