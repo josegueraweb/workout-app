@@ -1,9 +1,11 @@
+  <link rel="stylesheet" href="/css/dashboard.css">
+
 {{#if logged_in}}
 
 <form id="workout-form">
 
     <!-- Question: What level of exercise are you comfortable with? -->
-    <p>What level of exercise are you comfortable with?</p>
+    <p><strong>What level of exercise are you comfortable with?</strong></p>
     <input type="radio" id="level-beginner" name="level-type" value="beginner">
     <label for="level-beginner">Beginner</label><br>
     <input type="radio" id="level-intermediate" name="level-type" value="intermediate">
@@ -12,7 +14,7 @@
     <label for="level-expert">Expert</label><br>
 
     <!-- Question: What type of workout are you looking for? -->
-    <p>What type of workout are you looking for?</p>
+    <p><strong>What type of workout are you looking for?</strong></p>
     <input type="radio" id="workout-cardio" name="workout-type" value="cardio">
     <label for="workout-cardio">Cardio</label><br>
     <input type="radio" id="workout-olympic-weigthlifting" name="workout-type" value="olympic_weigthlifting">
@@ -27,7 +29,7 @@
     <label for="workout-strongman">Strongman</label><br>
 
     <!-- Question: What type of equipment do you have? -->
-    <p>What type of muscle do you want to target? (OPTIONAL: Select only one)</p>
+    <p><strong>What type of muscle do you want to target? (OPTIONAL: Select only one)</strong></p>
     <input type="checkbox" id="muscle-abdominals" name="muscle-type" value="abdominals">
     <label for="muscle-abdominals">Abdominals</label><br>
 
@@ -77,21 +79,20 @@
     <label for="muscle-triceps">Triceps</label><br>
 
     <!-- HTML submit button -->
-    <input type="submit" value="Submit">
+    <input class="workout-submit-btn" type="submit" value="Submit">
+    {{#if logged_in}}
+    <button id="btn-logout" style="margin:0 0 1rem 0;">Logout</button>
+    {{/if}}
 </form>
 
-<div id="results" class="hidden">
-
-</div>
+<div id="results" class="hidden"></div>
 <div class="btns">
     <button id="regenerate-button" class="hidden">Regenerate Workout</button>
 </div>
 
 {{/if}}
 
-{{#if logged_in}}
-<button id="btn-logout">logout</button>
-{{/if}}
+
 
 <script src="/javascript/dashboard.js"></script>
 

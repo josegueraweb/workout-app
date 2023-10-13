@@ -13,6 +13,10 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+
 const sess = {
   secret: 'supersecretsessiontext',
   cookie: { maxAge: 180000},

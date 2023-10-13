@@ -1,25 +1,40 @@
- * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-/*
-
 body {
     display: flex;
     justify-content: center; 
     align-items: center;
     min-height: 100vh;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
-*/
-.login-wrapper {
+
+.hidden {
+    display: none;
+}
+
+#results {
+    margin: 0 auto;
+    background-color: black;
+    height: 60%;
+    width: 50%;
+    line-height: 3rem;
+    padding: 5rem;
+    color: white;
+}
+
+/* //Login Page ================================= */
+
+
+.login-wrapper { /* form container */
     width: 420px;
     background: rgb(8, 7, 8);
-    color: #fff;
+    color: #040000;
     border-radius: 10px;
     padding: 30px 40px;
 }
@@ -28,6 +43,7 @@ body {
 .login-wrapper h1 {
     font-size: 36px;
     text-align: center;
+    color: #fff;
 }
 
 .login-wrapper .input-box {
@@ -70,14 +86,26 @@ body {
     font-size: 14.5px;
     padding: 1rem;
 }
-.login-remember-forgot label input {
-    accent-color: #fff;
-    margin-right: 3px;
+.login-remember-forgot {
+    color: #fff;
+    padding-right: 1rem;
 }
 
 .login-remember-forgot a {
     color: #fff;
     text-decoration: underline;
+}
+
+.page-container {
+    z-index: -1;
+}
+
+.remember-checkbox {
+    margin-right: 1rem;
+}
+
+#login-form {
+    line-height: 3.5rem;
 }
 
 .login-remember-forgot a:hover {
@@ -108,6 +136,7 @@ body {
 
 .login-register-link {
     margin: 0, auto;
+    color: #fff;
 }
 
 .login-register-link p a {
@@ -132,15 +161,16 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
     font-size: 16px;
-    color: #333;
+    color: #000000;
     font-weight: 600;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
 
 
-/*
-* {
+/* Register Page ================================= */
+
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -155,27 +185,28 @@ body {
     background-image: url('/images/workout.jpeg');
     background-size: cover;
     background-position: center;
-} 
+}  */
 
-/* */
-
-.signup-wrapper {
-    width: 420px;
-    background: transparent;
+.signup-wrapper { /* form container */
+    width: 25rem;
+    background-color: #000000;
     border:2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    color: #fff;
+    color: #ffffff;
     border-radius: 10px;
-    padding: 30px 40px;
+    padding: 5rem;
 }
 
+
 .signup-wrapper h1 {
-    font-size: 36px;
+    font-size: 2.5rem;
     text-align: center;
 }
 
-.signup-wrapper .input-box {
+
+
+.signup-wrapper .signup-input-box {
     position: relative;
     width: 100%;
     height: 50px;
@@ -191,12 +222,12 @@ body {
     border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 40px;
     font-size: 16px;
-    color: #fff;
+    color: #2cff80;
     padding: 20px 45px 20px 20px;
 }
 
 .signup-input-box input::placeholder {
-    color: #fff;
+    color: #f9f9f9;
 }
 
 .signup-input-box i {
@@ -214,12 +245,12 @@ body {
     margin: -15px 0 15px;
 }
 .signup-remember-forgot label input {
-    accent-color: #fff;
+    accent-color: #000000;
     margin-right: 3px;
 }
 
 .signup-remember-forgot a {
-    color: #fff;
+    color: #000000;
     text-decoration: underline;
 }
 
@@ -227,17 +258,21 @@ body {
     text-decoration: underline;
 }
 
-.signup-wrapper .btn {
+.bx-register {
+    color: #ffffff;
+}
+
+.btn-register {
     width: 100%;
     height: 45px;
-    background: #fff;
+    background: #fffefe;
     border: node;
     outline: none;
     border-radius: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
     font-size: 16px;
-    color: #333;
+    color: #000000;
     font-weight: 600;
 }
 
@@ -249,7 +284,7 @@ body {
 }
 
 .signup-register-link p a {
-    color: #efe7e7;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 600;
 }
@@ -258,7 +293,7 @@ body {
     text-decoration: underline;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
 
 /*
 * {
@@ -576,10 +611,73 @@ Logo {
     width: 1438px;
     margin-left: 197px;
 }
+
+
+*/
 #workout-form {
-    background-color: beige;
-    margin-left: 197px;
+    margin: 2rem 0 2rem 0;
+    background-color: rgb(0, 0, 0);
+    line-height: 1.5rem;
+    padding: .5rem 2rem;
+    color:#fff;
+    border:2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
 }
+
+#workout-form p {
+    margin: 1rem 0;
+}
+
+.workout-submit-btn {
+    margin: 2rem 0 1rem 0;
+    width: 100%;
+    height: 45px;
+    background: #fffefe;
+    border: node;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 600;
+}
+
+#regenerate-button {
+    margin: 0 0 4rem 0;
+    width: 100%;
+    height: 45px;
+    background: #fffefe;
+    border: node;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 600;
+}
+
+#btn-logout {
+    margin: 1rem 0 4rem 0;
+    width: 100%;
+    height: 45px;
+    background: #fffefe;
+    border: node;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 600;
+}
+
+
+
+/*
 .btns {
     margin-left: 200px;
 } */
