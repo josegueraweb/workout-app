@@ -1,29 +1,72 @@
-# Workout-Dictionary
-Is an online exercise application that allows users to build a custom profile based off of their workout needs, by providing specified workout options and keeping track of their progress 
+# Titans Training // Group Project 02
+The **Titans Training** web application assists users in generating custom workout routines with just a few clicks of a button. Simply create an account, fill out a brief questionnaire, and then enjoy a curated list of exercises tailor-made to help them achieve their health and fitness goals.
 
-# Features
-Log in for USER Profile
+## Application Features
+- Users can create and login to their personal accounts, where they can start generating curated workout plans from their dashboard.
 
-Form for USER to create their custom profile 
+- Upon filling out the web application's brief questionaire, users can then generate their personalized workouts from their dashboard page. 
 
-Search Bar to find specific workout material
+- Users can regenerate their list of wrokouts as many times as they like by utilizing the application's **"Regenerate Workout"** button.
 
-Tracker for to help USER reach goals 
 
-Advanced API database to provide USER with multiple workout options based off of inputed criteria 
+## User Story
+ - As a person interested in exercising, I would like to be able to find workouts that I can utilize to achieve my specific health and fitness goals.
 
-Main Menu drop down for USER to have quick access to desired option
+## Acceptance Criteria
+- WHEN I open the Titans Training application, 
 
-# User Story
-As a person interested in exercising, I would like to be able to find workouts that are for specific muscles to better my experience and to be able to track my workout goals with my custom profile. By answering certain questions, I can figure out what type of workout it is, the function of it, and what outcome I would receive from it. I would also like access to track my workout plans and goals to see my ending results. 
+- THEN I am prompted with a login page where I can login to be user account or choose to register a new one.
 
-# Acceptance Criteria
-GIVEN When I open the app I am prompted with a Log In
-THEN I log into the app or I register to use the app
-WHEN I am logged in I am given question prompts
-WHEN I answer the question prompts and click generate 
-THEN I am given the workouts that meet my criteria 
+- WHEN I register a user account within the Titans Training application, 
 
-# Installation
+- THEN I am taken to the application dashboard, 
 
-# Mock-Up 
+- WHEN I answer all required questions within the workout questionaire, 
+
+- THEN I am given a curated list of exercises that match the specific parameters that I queried for on the questionaire. 
+
+- WHEN I click on the **"Regenerate Workout"** button,
+
+- THEN I given another unique list of exercises still matching the specific parameters that I queried for on the questionaire. 
+
+- WHEN I click on the **"Logout"** button,
+
+- THEN I will be logged out of my user account and returned to the Titans Training login page. 
+
+## Technologies Used
+- HTML / CSS / JavaScript
+
+- API Ninja
+
+- boxicons
+
+- Node.js
+
+- Express.js
+
+- mySQL
+
+- Sequelize
+
+- Handlebars.js
+
+- bcrypt
+
+## Live Application / Code Repo
+
+**Live**: https://group9-workout-app-6a2c79670d32.herokuapp.com/
+
+**GitHub Repo**: https://github.com/josegueraweb/workout-app/tree/main
+
+## Mock-Up
+**Login Page**
+![shot_01](public/images/screenshots/Screenshot1.png)
+
+**Workout Questionaire**
+![shot_02](public/images/screenshots/Screenshot2.png)
+
+**Generate List of Workouts**
+![shot_03](public/images/screenshots/Screenshot3.png)
+
+**Register Page**
+![shot_04](public/images/screenshots/Screenshot4.png)
